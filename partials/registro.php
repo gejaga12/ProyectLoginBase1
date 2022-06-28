@@ -8,8 +8,6 @@
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':rol', $_POST['rol']);
         $stmt->bindParam(':password', $password);
-         
-        
         if ($stmt->execute()) {          
           header('Location: index.php');
           
